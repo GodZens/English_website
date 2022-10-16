@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歷屆碩士論文</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .header_background {
+            background-image: url(../應外首頁.png);
+            background-size: 100% 100%;
+        }
+
+        .header_color {
+            /* background-color: #411c2cd0; */
+            background-image: url(../背景圖.jpg);
+            background-size: 100% 100%;
+        }
+
+        .space_height_200 {
+            padding-bottom: 150px;
+        }
+
+        .header_selection li {
+            background-color: #5A3847;
+        }
+
+        .header_selection li a {
+            color: white;
+        }
+
+        .text-black {
+            color: black !important;
+        }
+
+        .navbar-position {
+
+            justify-content: flex-start;
+        }
+
+        .nav-item {
+            padding-left: 50px;
+        }
+
+        .nav-item a:hover {
+            background-color: #fff;
+        }
+
+        /* footer */
+        .footer-background {
+            background-color: black;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .fs-20 {
+            font-size: 25px;
+        }
+
+
+        .footer-icon {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        /* 側邊表單 */
+        .side-menu {
+            width: 300px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-menu form {
+            display: flex;
+            margin: 50px 10px 0px;
+            border-radius: 100px;
+            border: 1px solid black;
+        }
+
+        .side-menu form button,
+        .side-menu form input {
+            border: none;
+            padding: 5px 10px;
+            width: 230px;
+            background-color: transparent;
+        }
+
+        .side-menu form button:focus,
+        .side-menu form input:focus {
+            outline: none;
+        }
+
+        .side-menu form input {
+            width: 150px;
+        }
+
+        .side-menu form button {
+            width: 50px;
+        }
+
+        .side-menu>nav>a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .side-menu>nav>a+a::before {
+            content: '';
+            position: absolute;
+            border-top: 1px solid #e0dede;
+            left: 10px;
+            right: 10px;
+            top: 0;
+        }
+
+        .side-menu>nav>a .fa-solid {
+            margin-right: -1.1em;
+            transform: scale(0);
+            transition: .3s;
+        }
+
+        .side-menu>nav>a:hover .fa-solid {
+            margin-right: 0em;
+            transform: scale(1);
+        }
+
+        .menu-text,
+        .fa-solid {
+            color: black;
+        }
+
+        .side-menu>nav>a:hover .menu-text,
+        .fa-solid {
+            color: #53b8f3;
+        }
+
+        /* 側邊表單 */
+        /* 學生作品 */
+        .fs-15 {
+            font-size: 15px;
+        }
+
+        .fs-18 {
+            font-size: 18px;
+        }
+
+        .color-red {
+            color: red;
+        }
+
+        .color-gray {
+            color: #999
+        }
+
+        .shared-title {
+            border-bottom: 1px rgb(150, 147, 147) solid;
+        }
+
+        .height-25 {
+            height: 25px;
+        }
+
+        .shared-disc {
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .shared-disc:before {
+            background-color: black;
+            position: absolute;
+            content: '';
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            bottom: 10px;
+            left: 0px;
+        }
+
+
+        .shared_table {
+            width: 800px;
+            max-width: 100%;
+        }
+        .table_border_b{
+            border-bottom: 1px solid #747474;
+        }
+        .table_title_t{
+           
+            border-top: 1px solid #747474;
+        }
+ 
+
+        /* 學生作品 */
+        /* ============ only desktop view ============ */
+        @media all and (min-width: 992px) {
+            .navbar .dropdown-menu-end {
+                right: 0;
+                left: auto;
+            }
+
+            .navbar .nav-item .dropdown-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                margin-top: 0;
+            }
+
+            .navbar .nav-item:hover .nav-link {
+                color: #fff;
+            }
+
+            .navbar .dropdown-menu.fade-down {
+                top: 80%;
+                transform: rotateX(-75deg);
+                transform-origin: 0% 0%;
+            }
+
+            .navbar .dropdown-menu.fade-up {
+                top: 180%;
+            }
+
+            .navbar .nav-item:hover .dropdown-menu {
+                transition: .3s;
+                opacity: 1;
+                visibility: visible;
+                top: 100%;
+                transform: rotateX(0deg);
+            }
+
+            .header_background {
+                justify-content: center;
+            }
+
+            .navbar-position {
+                justify-content: center;
+            }
+
+            /* 刪除箭頭 */
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+
+        }
+
+        @media screen and (max-width:992px) {
+
+            .footer-icon {
+                justify-content: flex-start;
+                padding-left: 30px; 
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 每個頁面的最上方 -->
+    <header class="container p-0">
+        <div class="row justify-content-between m-0">
+            <div class="col-12 header_background  p-0">
+                <ul class="header_selection space_height_200 w-100 justify-content-end d-flex  flex-wrap">
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>雲科大首頁</b></span></a></li>
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>中文</b> </span></a></li>
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>英文</b></span></a></li>
+                </ul>
+
+            </div>
+            <div class="col-12  w-100 header_color p-0">
+                <!-- ============= COMPONENT ============== -->
+                <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                    <div class="container-fluid ">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse navbar-position" id="main_nav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active p-0"> <a class="nav-link text-black" href="#">Home </a> </li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> About </a></li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Services </a></li>
+                                <li class="nav-item dropdown p-0">
+                                    <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">
+                                        Hover me
+                                    </a>
+                                    <ul class="dropdown-menu fade-up">
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Menu item </a></li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Menu item </a></li>
+                                <li class="nav-item dropdown p-0">
+                                    <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">
+                                        Dropdown
+                                        right </a>
+                                    <ul class="dropdown-menu dropdown-menu-end fade-down">
+                                        <li><a class="dropdown-item p-0" href="#"> Submenu item 1</a></li>
+                                        <li><a class="dropdown-item p-0" href="#"> Submenu item 2 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div> <!-- navbar-collapse.// -->
+                    </div> <!-- container-fluid.// -->
+                </nav>
+                <!-- ============= COMPONENT END// ============== -->
+            </div>
+        </div>
+    </header>
+    <!-- 每個頁面的最上方 -->
+
+
+    <div class="container ">
+        <div class="row justify-content-between">
+            <!-- 側邊選單 -->
+            <div class="col-12 col-lg-2 side-menu mt-5">
+                <h1 class="fs-20 mb-3">碩士論文專區</h1>
+                <nav>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">相關辦法</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">相關表單</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">歷屆碩士論文</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- 右邊內容 -->
+            <div class="col-12 col-lg-9 ">
+                <div class="col-12 d-flex justify-content-between ">
+                    <span>
+                        <h1 class="fs-18 color-red mt-5 height-25 "><b class="shared-disc">
+                            碩士論文</b></h1>
+                    </span>
+                    <ul class="d-flex ">
+                        <li><a href="#" class="color-gray"> 首頁</a></li><span>></span>
+                        <li><a href="#" class="color-gray"> 學生專區</a></li><span>></span>
+                        <li>碩士論文</li>
+                        
+                    </ul>
+                </div>
+                <div class="col-12">
+                    <form>
+                        <select onchange="location.href='studentwork.php?type=practice&amp;id='+this.value">
+                            <option value="0">請選擇</option><option value="109">109</option>
+                            <option value="108">108</option>
+                            <option value="107">107</option>
+                            <option value="106">106</option>
+                            <option value="105">105</option>
+                            <option value="104">104</option>
+                            <option value="103">103</option>
+                            <option value="102">102</option>
+                            <option value="101">101</option>								</select>&nbsp;學年度
+                    </form>
+                </div>
+                <div class="col-12 mt-3">
+                    <table class=" shared_table  table-border table">
+                        <thead>
+                            <tr>
+                                <th scope="col" width="20%" >作者</th>
+                                <th scope="col" width="60%" >題目</th>
+                                <th scope="col" width="20%" >指導老師</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">何佳儒</th>
+                                <td  >新聞英文專欄對於寫作能力之提升</td>
+                                <td>魏式琦</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">劉佳炘</th>
+                                <td  >補救教學中學生自我效能、學習動機與自律學習之相關研究</td>
+                                <td>魏式琦</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">劉奕辰</th>
+                                <td  >透過社交媒體的自主學習對第二外語學習者的英文單字能力、英文閱讀能力及英文閱讀動機之效益研究</td>
+                                <td>魏式琦</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">尤雅芬</th>
+                                <td  >相互教學法對五年級生的同儕關係及學習動機與焦慮之影響</td>
+                                <td>洪銓修</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">巫翌慈</th>
+                                <td  >商展策略-以自行車零件供應商參加台北自行車展為例</td>
+                                <td>賴志超</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">張如婷</th>
+                                <td  >探討數位學習對幼兒英語教育之影響與經驗</td>
+                                <td>葉惠菁</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+               
+            </div>
+        </div>
+    </div>
+
+    <!-- 側邊選單+教育目標 -->
+
+    <!-- footer -->
+    <footer class="container p-0 footer-background mt-3">
+        <div class="row justify-content-center m-0">
+            <div class="col-lg-6 col-12">
+                <div class="col-12">
+                    <span class="text-white fs-20 mr-2"><b>國立雲林科技大學</b> </span>
+                    <span class="text-white fs-20"><b>應用外語系</b> </span>
+                </div>
+                <div class="col-12">
+                    <span class="text-white mr-2">64002 雲林縣斗六市大學路3段123號 </span>
+                    <span class="text-white ">Tel:05-5342601#5302~5304</span>
+                </div>
+                <div class="col-12">
+                    <span class="text-white mr-2">Copyright 2018 @ IM in NYUST ALL Right Reserved</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12  footer-icon">
+                <span class="text-white ">
+                    <a href="#"><i class="fa-brands fa-facebook fs-20 text-white mr-2"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope fs-20 text-white mr-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fs-20 text-white"></i></a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a02478fc6d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

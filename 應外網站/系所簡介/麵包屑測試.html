@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+
+.breadcrumbList{
+  background-color: #333333;
+}
+
+.breadcrumbList {
+  border-bottom: 3px solid #26ff93;
+  box-shadow: inset 0 0 11px 3px rgba(0, 0, 0, 0.6);
+}
+.breadcrumbList .breadcrumb {
+  display: flex;
+}
+.breadcrumbList .breadcrumb li {
+  padding: 20px 20px 20px 0px;
+}
+.breadcrumbList .breadcrumb li + li {
+  padding-left: 0;
+}
+.breadcrumbList .breadcrumb li + li::before {
+  content: "/";
+  color: #fff;
+  padding-right: 20px;
+}
+.breadcrumbList .breadcrumb li:last-child a {
+  color: #26ff93;
+}
+.breadcrumbList .breadcrumb li a {
+  color: #ffffff;
+  font-weight: 100;
+  font-size: 16px;
+  cursor: pointer;
+}
+.breadcrumbList .breadcrumb li a:hover {
+  color: #26ff93;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="breadcrumbList">
+        <div class="container">
+          <ol class="breadcrumb">
+            <li><a href="#">金魚系列 VIII</a></li>
+            <li><a href="#">讓自己知道目前位置的麵包屑</a></li>
+            <li><a href="#">為什麼要叫做麵包屑</a></li>
+            <li><a href="#">網頁麵包屑跟真實麵包屑的差異</a></li>
+            <li><a href="#">直接看故事</a></li>
+          </ol>
+        </div>
+      </div>
+</body>
+
+</html>

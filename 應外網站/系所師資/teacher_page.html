@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>師資介紹</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a02478fc6d.js" crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="./flaviusmatis-simplePagination.js-da97104/"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        /* header */
+        .header_background {
+            background-image: url(../應外首頁.png);
+            background-size: 100% 100%;
+        }
+
+        .header_color {
+            /* background-color: #411c2cd0; */
+            background-image: url(../背景圖.jpg);
+            background-size: 100% 100%;
+        }
+
+        .space_height_200 {
+            padding-bottom: 150px;
+        }
+
+        .header_selection li {
+            background-color: #5A3847;
+
+        }
+
+        .header_selection li a {
+            color: white;
+        }
+
+        .text-black {
+            color: black !important;
+        }
+
+        .navbar-position {
+
+            justify-content: flex-start;
+        }
+
+        .nav-item {
+            padding-left: 50px;
+        }
+
+        .nav-item a:hover {
+            background-color: #fff;
+        }
+         /* footer */
+         .footer-background {
+            background-color: black;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .fs-20 {
+            font-size: 25px;
+        }
+
+        .footer-icon {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        /* footer */
+        @media all and (min-width: 992px) {
+            .navbar .dropdown-menu-end {
+                right: 0;
+                left: auto;
+            }
+
+            .navbar .nav-item .dropdown-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                margin-top: 0;
+            }
+
+            .navbar .nav-item:hover .nav-link {
+                color: #fff;
+            }
+
+            .navbar .dropdown-menu.fade-down {
+                top: 80%;
+                transform: rotateX(-75deg);
+                transform-origin: 0% 0%;
+            }
+
+            .navbar .dropdown-menu.fade-up {
+                top: 180%;
+            }
+
+            .navbar .nav-item:hover .dropdown-menu {
+                transition: .3s;
+                opacity: 1;
+                visibility: visible;
+                top: 100%;
+                transform: rotateX(0deg);
+            }
+
+            .header_background {
+                justify-content: center;
+            }
+
+            .navbar-position {
+                justify-content: center;
+            }
+
+            /* 刪除箭頭 */
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+
+        }
+
+        /* header */
+        /* teacher */
+        .fs-20 {
+            font-size: 20px;
+        }
+
+        .fs-10 {
+            font-size: 10px;
+        }
+
+        .teacher-Breadcrumb-background {
+            background-image: url(../漸變背景.jpg);
+            background-size: 100% 100%;
+        }
+
+        .breadcrumb {
+            background: none;
+        }
+
+        .teacher-title {
+            font-family: 微軟正黑體;
+            font-size: 34px;
+            color: #087abd;
+        }
+
+        .dottedline {
+            margin-top: 15px;
+            border-bottom-style: dotted;
+            border-bottom-width: 1px;
+            border-color: #b5b5b5;
+        }
+
+        .teacher-pic {
+            border: 3px solid #bababa;
+            padding: 20px;
+        }
+
+        @media screen and (max-width:992px) {
+            .teacher-Breadcrumb {
+                display: none;
+            }
+            .content-space{
+                margin-bottom: 20px;
+            }
+            .footer-icon {
+                justify-content: flex-start;
+                padding-left: 30px;
+            }
+        }
+
+        /* teacher */
+    </style>
+</head>
+
+<body>
+
+    <!-- 每個頁面的最上方 -->
+    <header class="container p-0">
+        <div class="row justify-content-between m-0">
+            <div class="col-12 header_background  p-0">
+                <ul class="header_selection space_height_200 w-100 justify-content-end d-flex  flex-wrap">
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>雲科大首頁</b></span></a></li>
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>中文</b> </span></a></li>
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>英文</b></span></a></li>
+                </ul>
+
+            </div>
+            <div class="col-12  w-100 header_color p-0">
+                <!-- ============= COMPONENT ============== -->
+                <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                    <div class="container-fluid ">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse navbar-position" id="main_nav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active p-0"> <a class="nav-link text-black" href="#">Home </a> </li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> About </a></li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Services </a></li>
+                                <li class="nav-item dropdown p-0">
+                                    <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">
+                                        Hover me
+                                    </a>
+                                    <ul class="dropdown-menu fade-up">
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Menu item </a></li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Menu item </a></li>
+                                <li class="nav-item dropdown p-0">
+                                    <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">
+                                        Dropdown
+                                        right </a>
+                                    <ul class="dropdown-menu dropdown-menu-end fade-down">
+                                        <li><a class="dropdown-item p-0" href="#"> Submenu item 1</a></li>
+                                        <li><a class="dropdown-item p-0" href="#"> Submenu item 2 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div> <!-- navbar-collapse.// -->
+                    </div> <!-- container-fluid.// -->
+                </nav>
+                <!-- ============= COMPONENT END// ============== -->
+            </div>
+        </div>
+    </header>
+    <!-- 每個頁面的最上方 -->
+    <!-- 麵包屑 -->
+    <div class="container teacher-Breadcrumb-background">
+        <div class="row justify-content-center m-0">
+            <div class="col-5 teacher-Breadcrumb">
+                <nav>
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">teacher</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="col-5 d-flex flex-column align-items-end teacher-Breadcrumb">
+                <h2 class="fs-20 teacher-Breadcrumb">應用外語系</h2>
+                <h5 class="fs-10 teacher-Breadcrumb">Department of Applied Foreign Languages</h5>
+            </div>
+        </div>
+    </div>
+    <!-- 麵包屑 -->
+    <!-- 老師介紹 -->
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-12 mb-2">
+                <h1>
+                    <b class="teacher-title">師資介紹</b>
+                    <span class="dottedline d-block"></span>
+                </h1>
+            </div>
+            <div class="col-lg-5 col-12 content-space">
+                <div class="d-flex justify-content-center">
+                    <a href="#">
+                        <img class="teacher-pic" src="../莊老師圖片.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-7 col-12 teacher-pic d-flex flex-wrap mb-2">
+                <div class="col-12 d-flex ">
+                    <div class="col-8 p-0">
+                        <span class="d-block">莊煥銘</span>
+                        <span class="d-block">教授 (兼任 系主任)</span>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="#"><i class="fa-regular fa-envelope fs-20 mr-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <span>學歷： 美國愛荷華大學資訊 管理 博士</span><br>
+                    <span>專長： 行銷資訊管理、策略資訊管理、顧客關係管理</span><br>
+                    <span>E-mail：<a href="#">chuanghm@yuntech.edu.tw</a></span><br>
+                    <span>個人網站：<a href="#">https://www.mis.yuntech.edu.tw/?page_id=19197</a></span><br>
+                    <span>辦公室：MB413</span><br>
+                    <span>電話分機：5325</span><br>
+                    <span>實驗室：MA223 策略資訊系統實驗室</span>
+                    
+                </div>
+            </div>
+            <div class="col-12 mb-3">
+                <span class="dottedline d-block"></span>
+            </div>
+            <div class="col-lg-5 col-12 content-space">
+                <div class="d-flex justify-content-center">
+                    <a href="#">
+                        <img class="teacher-pic" src="../莊老師圖片.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-7 col-12 teacher-pic d-flex flex-wrap mb-2">
+                <div class="col-12 d-flex ">
+                    <div class="col-8 p-0">
+                        <span class="d-block">莊煥銘</span>
+                        <span class="d-block">教授 (兼任 系主任)</span>
+                    </div>
+                    <div class="col-4 text-right">
+                        <a href="#"><i class="fa-regular fa-envelope fs-20 mr-2"></i></a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <span>學歷： 美國愛荷華大學資訊 管理 博士</span><br>
+                    <span>專長： 行銷資訊管理、策略資訊管理、顧客關係管理</span><br>
+                    <span>E-mail：<a href="#">chuanghm@yuntech.edu.tw</a></span><br>
+                    <span>個人網站：<a href="#">https://www.mis.yuntech.edu.tw/?page_id=19197</a></span><br>
+                    <span>辦公室：MB413</span><br>
+                    <span>電話分機：5325</span><br>
+                    <span>實驗室：MA223 策略資訊系統實驗室</span>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <!-- 老師介紹 -->
+
+        <!-- footer -->
+        <footer class="container p-0 footer-background mt-3">
+            <div class="row justify-content-center m-0">
+                <div class="col-lg-6 col-12">
+                    <div class="col-12">
+                        <span class="text-white fs-20 mr-2"><b>國立雲林科技大學</b> </span>
+                        <span class="text-white fs-20"><b>應用外語系</b> </span>
+                    </div>
+                    <div class="col-12">
+                        <span class="text-white mr-2">64002 雲林縣斗六市大學路3段123號 </span>
+                        <span class="text-white ">Tel:05-5342601#5302~5304</span>
+                    </div>
+                    <div class="col-12">
+                        <span class="text-white mr-2">Copyright 2018 @ IM in NYUST ALL Right Reserved</span>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12  footer-icon">
+                    <span class="text-white ">
+                        <a href="#"><i class="fa-brands fa-facebook fs-20 text-white mr-2"></i></a>
+                        <a href="#"><i class="fa-regular fa-envelope fs-20 text-white mr-2"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube fs-20 text-white"></i></a>
+                    </span>
+                </div>
+            </div>
+        </footer>
+    
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // 碰到該物件自動觸發click事件
+        $('.dropdown').hover(function () {
+            $('.dropdown-toggle').trigger('click');
+        });
+
+    </script>
+</body>
+
+</html>

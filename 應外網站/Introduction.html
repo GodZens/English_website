@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>系所介紹</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        .header_background {
+            background-image: url(./應外首頁.png);
+            background-size: 100% 100%;
+        }
+
+        .header_color {
+            /* background-color: #411c2cd0; */
+            background-image: url(./背景圖.jpg);
+            background-size: 100% 100%;
+        }
+
+        .space_height_200 {
+            padding-bottom: 150px;
+        }
+
+        .header_selection li {
+            background-color: #5A3847;
+        }
+
+        .header_selection li a {
+            color: white;
+        }
+
+        .text-black {
+            color: black !important;
+        }
+
+        .navbar-position {
+
+            justify-content: flex-start;
+        }
+
+        .nav-item {
+            padding-left: 50px;
+        }
+
+        .nav-item a:hover {
+            background-color: #fff;
+        }
+
+        /* footer */
+        .footer-background {
+            background-color: black;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .fs-20 {
+            font-size: 25px;
+        }
+
+        .footer-icon {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        /* footer */
+        /* ============ only desktop view ============ */
+        @media all and (min-width: 992px) {
+            .navbar .dropdown-menu-end {
+                right: 0;
+                left: auto;
+            }
+
+            .navbar .nav-item .dropdown-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                margin-top: 0;
+            }
+
+            .navbar .nav-item:hover .nav-link {
+                color: #fff;
+            }
+
+            .navbar .dropdown-menu.fade-down {
+                top: 80%;
+                transform: rotateX(-75deg);
+                transform-origin: 0% 0%;
+            }
+
+            .navbar .dropdown-menu.fade-up {
+                top: 180%;
+            }
+
+            .navbar .nav-item:hover .dropdown-menu {
+                transition: .3s;
+                opacity: 1;
+                visibility: visible;
+                top: 100%;
+                transform: rotateX(0deg);
+            }
+
+            .header_background {
+                justify-content: center;
+            }
+
+            .navbar-position {
+                justify-content: center;
+            }
+
+            /* 刪除箭頭 */
+            .dropdown-toggle::after {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width:992px) {
+
+            /* footer*/
+
+            .footer-icon {
+                justify-content: flex-start;
+                padding-left: 30px;
+            }
+        }
+
+        /* 系所簡介 */
+        /* 分隔線 */
+        .dottedline {
+            margin-top: 15px;
+            border-bottom-style: dotted;
+            border-bottom-width: 1px;
+            border-color: #b5b5b5;
+        }
+
+        .introduction_title {
+            color: #087abd;
+            font-size: 45px;
+        }
+
+        .introduction_subtitle {
+            color: #00aaff;
+            margin: 20px 0px;
+        }
+
+        .introduction_hr {
+            display: block;
+            unicode-bidi: isolate;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            overflow: hidden;
+            border-style: inset;
+            border-width: 1px;
+            background-color: #747474;
+        }
+
+        .introduction_grade {
+            padding-left: 20px;
+        }
+
+        .introduction_grade li {
+            list-style-type: disc;
+
+        }
+        .introduction_table{
+            width: 713px;
+            height: 700px;
+            max-width: 100%;
+            color:#747474;
+            border: 1px solid #e0dede;
+        }
+        .introduction_table tbody tr td {
+            text-align: center;
+            
+        }
+        .table_border_b{
+            border-bottom: 1px solid #747474;
+        }
+        .table_title_b_r{
+           
+            border-bottom: 1px solid #747474;
+            border-right: 1px solid #747474;
+        }
+        .table_border_r{
+            border-right: 1px solid #747474;
+        }
+        /* 系所簡介 */
+    </style>
+</head>
+
+<body>
+    <!-- 每個頁面的最上方 -->
+    <header class="container p-0">
+        <div class="row justify-content-between m-0">
+            <div class="col-12 header_background  p-0">
+                <ul class="header_selection space_height_200 w-100 justify-content-end d-flex  flex-wrap">
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>雲科大首頁</b></span></a></li>
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>中文</b> </span></a></li>
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>英文</b></span></a></li>
+                </ul>
+
+            </div>
+            <div class="col-12  w-100 header_color p-0">
+                <!-- ============= COMPONENT ============== -->
+                <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                    <div class="container-fluid ">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse navbar-position" id="main_nav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active p-0"> <a class="nav-link text-black" href="#">Home </a> </li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> About </a></li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Services </a></li>
+                                <li class="nav-item dropdown p-0">
+                                    <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">
+                                        Hover me
+                                    </a>
+                                    <ul class="dropdown-menu fade-up">
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Menu item </a></li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Menu item </a></li>
+                                <li class="nav-item dropdown p-0">
+                                    <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">
+                                        Dropdown
+                                        right </a>
+                                    <ul class="dropdown-menu dropdown-menu-end fade-down">
+                                        <li><a class="dropdown-item p-0" href="#"> Submenu item 1</a></li>
+                                        <li><a class="dropdown-item p-0" href="#"> Submenu item 2 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div> <!-- navbar-collapse.// -->
+                    </div> <!-- container-fluid.// -->
+                </nav>
+                <!-- ============= COMPONENT END// ============== -->
+            </div>
+        </div>
+    </header>
+
+    <div class="container p-4">
+        <h1><b class="introduction_title">系所簡介</b></h1>
+        <span class="dottedline d-block mb-3"></span>
+        <h3 class="introduction_subtitle"><i class="fa-solid fa-circle-arrow-right mr-2"></i>簡介</h3>
+        <p class="mb-4">
+            本系成立於1991年。大學部有四技及二技等兩種學制，研究所有碩士班、碩士在職專班、數位學習碩士在職專班及博士班。本系重視資訊科技之專業研究發展，資訊管理之進階實務應用，兼具企業倫理，並因應國家資訊工業政策與社會需求，積極培育全方位高階資訊管理人才。
+        </p>
+        <hr class="introduction_hr">
+        <h3 class="introduction_subtitle"><i class="fa-solid fa-circle-arrow-right mr-2"></i>師資</h3>
+        <p class="mb-4">本系現有專任教師共17位，計有教授10位、副教授5位、助理教授2位，分屬資訊技術與資訊管理等學程。</p>
+        <hr class="introduction_hr">
+        <h3 class="introduction_subtitle"><i class="fa-solid fa-circle-arrow-right mr-2"></i>教學目的</h3>
+        <ul class="introduction_grade">
+            <li>大學部：培養具備專業整合能力與企業倫理之基礎資訊管理人才。</li>
+            <li>碩士班：培養具備專業整合能力與企業倫理之中高階資訊管理人才。</li>
+            <li>博士班：培養具備專業研究能力與教學能力之資訊管理人才。</li>
+        </ul>
+        <hr class="introduction_hr">
+        <h3 class="introduction_subtitle"><i class="fa-solid fa-circle-arrow-right mr-2"></i>校、院、系核心能力關連</h3>
+        <table class="introduction_table" border="1px">
+            <tbody>
+                <tr>
+                    <td  class="table_border_b" rowspan="2" width="18%"><strong><span>校核心能力</span></strong></td>
+                    <td  class="table_title_b_r" rowspan="2" width="18%"><strong><span>院核心價值</span></strong></td>
+                    <td  width="30%"><strong>系（所）別</strong></td>
+                    <td  width="12%"><strong>大學部</strong></td>
+                    <td  width="13%"><strong>碩士班</strong></td>
+                    <td  width="13%"><strong>博士班</strong></td>
+                </tr>
+                <tr>
+                    <td  width="30%" class="table_border_b"><strong>院核心能力</strong></td>
+                    <td  width="12%"  class="table_border_b"><strong>BIM</strong></td>
+                    <td  width="13%"  class="table_border_b"><strong>MIM</strong></td>
+                    <td  width="13%"  class="table_border_b"><strong>PhD</strong></td>
+                </tr>
+                <tr>
+                    <td  width="18%"><strong>恆－解決力</strong></td>
+                    <td  class="table_border_r" width="12%"><strong>專業</strong></td>
+                    <td  width="30%"><strong>Problem-solving ability</strong><br>
+                        <strong>問題解決能力</strong>
+                    </td>
+                    <td  width="12%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                </tr>
+                <tr>
+                    <td  width="18%"><strong>恆－學習力</strong></td>
+                    <td  class="table_border_r" width="12%"><strong>專業</strong></td>
+                    <td  width="30%"><strong>Analytical ability</strong><br>
+                        <strong>分析能力</strong>
+                    </td>
+                    <td  width="12%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                </tr>
+                <tr>
+                    <td  width="18%"><strong>新－創新力</strong></td>
+                    <td  class="table_border_r" width="12%"><strong>專業</strong></td>
+                    <td  width="30%"><strong>Innovation</strong><br>
+                        <strong>創新能力</strong>
+                    </td>
+                    <td  width="12%"></td>
+                    <td  width="13%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                </tr>
+                <tr>
+                    <td  width="18%"><strong>誠－溝通力</strong></td>
+                    <td  class="table_border_r" width="12%"><strong>整合</strong></td>
+                    <td  width="30%"><strong>Communication skill</strong><br>
+                        <strong>表達溝通能力</strong>
+                    </td>
+                    <td  width="12%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                </tr>
+                <tr>
+                    <td  width="18%"><strong>誠－合作力</strong></td>
+                    <td  class="table_border_r" width="12%"><strong>整合</strong></td>
+                    <td  width="30%"><strong>Teamwork and cooperation</strong><br>
+                        <strong>團隊合作</strong>
+                    </td>
+                    <td  width="12%"><strong>√</strong></td>
+                    <td width="13%"></td>
+                    <td width="13%"></td>
+                </tr>
+                <tr>
+                    <td  width="18%"><strong>新－國際觀</strong></td>
+                    <td  class="table_border_r" width="12%"><strong>整合</strong></td>
+                    <td  width="30%"><strong>Global perspective</strong><br>
+                        <strong>國際觀</strong>
+                    </td>
+                    <td  width="12%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                </tr>
+                <tr>
+                    <td  width="18%"><strong>敬－道德力</strong></td>
+                    <td  class="table_border_r" width="12%"><strong>倫理</strong></td>
+                    <td  width="30%"><strong>Professional ethics</strong><br>
+                        <strong>專業倫理與道德</strong>
+                    </td>
+                    <td  width="12%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                    <td  width="13%"><strong>√</strong></td>
+                </tr>
+                <tr>
+                    <td  width="18%"><strong>敬－實踐力</strong></td>
+                    <td  class="table_border_r" width="12%"><strong>倫理</strong></td>
+                    <td  width="30%"><strong>Social participation</strong><br>
+                        <strong>社會參與能力</strong>
+                    </td>
+                    <td  width="12%"><strong>√</strong></td>
+                    <td  width="13%"></td>
+                    <td  width="13%"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- footer -->
+    <footer class="container p-0 footer-background mt-3">
+        <div class="row justify-content-center m-0">
+            <div class="col-lg-6 col-12">
+                <div class="col-12">
+                    <span class="text-white fs-20 mr-2"><b>國立雲林科技大學</b> </span>
+                    <span class="text-white fs-20"><b>應用外語系</b> </span>
+                </div>
+                <div class="col-12">
+                    <span class="text-white mr-2">64002 雲林縣斗六市大學路3段123號 </span>
+                    <span class="text-white ">Tel:05-5342601#5302~5304</span>
+                </div>
+                <div class="col-12">
+                    <span class="text-white mr-2">Copyright 2018 @ IM in NYUST ALL Right Reserved</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12  footer-icon">
+                <span class="text-white ">
+                    <a href="#"><i class="fa-brands fa-facebook fs-20 text-white mr-2"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope fs-20 text-white mr-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fs-20 text-white"></i></a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a02478fc6d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
