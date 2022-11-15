@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>系所專區</title>
+    <title>實務專題成果 （實習組）</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
@@ -149,7 +149,7 @@
         }
 
         /* 側邊表單 */
-        /* 下載專區 */
+        /* 實習單位 */
         .fs-15 {
             font-size: 15px;
         }
@@ -166,7 +166,7 @@
             color: #999
         }
 
-        .download-title {
+        .shared-title {
             border-bottom: 1px rgb(150, 147, 147) solid;
         }
 
@@ -174,36 +174,39 @@
             height: 25px;
         }
 
-        .download-disc {
+        .shared-disc {
             position: relative;
             padding-left: 10px;
         }
 
-        .download-disc:before {
+        .shared-disc:before {
             background-color: black;
             position: absolute;
             content: '';
             height: 7px;
             width: 7px;
             border-radius: 50%;
-            bottom: 8px;
+            bottom: 10px;
             left: 0px;
         }
 
-        .download_subtitle {
-            color: #00aaff;
-            margin: 20px 0px;
-        }
 
-        .download_table {
-            width: 713px;
-
+        .shared_table {
+            width: 800px;
             max-width: 100%;
-
-            border: 1px solid #e0dede;
         }
 
-        /* 下載專區 */
+        .table_border_b {
+            border-bottom: 1px solid #747474;
+        }
+
+        .table_title_t {
+
+            border-top: 1px solid #747474;
+        }
+
+
+        /* 實習單位 */
         /* ============ only desktop view ============ */
         @media all and (min-width: 992px) {
             .navbar .dropdown-menu-end {
@@ -331,84 +334,105 @@
         <div class="row justify-content-between">
             <!-- 側邊選單 -->
             <div class="col-12 col-lg-2 side-menu mt-5">
-                <h1 class="fs-20 mb-3">系所專區</h1>
+                <h1 class="fs-20 mb-3">實務專題</h1>
                 <nav>
                     <a href="#">
-                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">教育目標</span>
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">實施辦法</span>
                     </a>
                     <a href="#">
-                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">系所簡介</span>
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">相關表單</span>
                     </a>
                     <a href="#">
-                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">系所特色</span>
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">歷屆實習單位</span>
                     </a>
                     <a href="#">
-                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">系所辦法</span>
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">實務專題成果</span>
                     </a>
-                    <a href="#">
-                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">核心能力</span>
-                    </a>
-                    <a href="#">
-                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">空間設備</span>
-                    </a>
-
                 </nav>
             </div>
             <!-- 右邊內容 -->
-            <div class="col-12 col-lg-9 p-0">
+            <div class="col-12 col-lg-9 ">
                 <div class="col-12 d-flex justify-content-between ">
                     <span>
-                        <h1 class="fs-18 color-red mt-5 download-title height-25 "><b class="download-disc">
-                                系所辦法</b></h1>
+                        <h1 class="fs-18 color-red mt-5 height-25 shared-title"><b class="shared-disc">
+                            111學年度實務專題成果 （實習組）</b></h1>
                     </span>
                     <ul class="d-flex ">
                         <li><a href="#" class="color-gray"> 首頁</a></li><span>></span>
-                        <li><a href="#" class="color-gray"> 系所簡介</a></li><span>></span>
-                        <li>系所辦法</li>
+                        <li><a href="#" class="color-gray"> 實務專題</a></li><span>></span>
+                        <li>實務專題成果（實習組）</li>
                     </ul>
                 </div>
+                <div class="col-12 mt-2">
+                    <form>
+                        <select onchange="location.href='studentwork.php?type=practice&amp;id='+this.value">
+                            <option value="0">請選擇</option>
+                            <option value="109">109</option>
+                            <option value="108">108</option>
+                            <option value="107">107</option>
+                            <option value="106">106</option>
+                            <option value="105">105</option>
+                            <option value="104">104</option>
+                            <option value="103">103</option>
+                            <option value="102">102</option>
+                            <option value="101">101</option>
+                        </select>&nbsp;學年度
+                    </form>
+                </div>
+
                 <div class="col-12 mt-3">
-                    <h3 class="download_subtitle fs-18"><i class="fa-solid fa-circle-arrow-right mr-2"></i>檔案</h3>
-                    <table class="table table-striped download_table table-bordered">
+                    <table class=" shared_table  table-border table">
                         <thead>
                             <tr>
-                                <th scope="col" width="70%">檔案名稱</th>
-                                <th scope="col" width="30%">檔案連結</th>
+                                <th scope="col" width="15%" class="text-center">學生姓名</th>
+                                <th scope="col" width="60%" class="text-center">專題題目</th>
+                                <th scope="col" width="15%" class="text-center">指導老師</th>
+                                <th scope="col" width="10%" class="text-center">檔案</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row" width="70%">國立雲林科技大學應用外語系推廣教育碩士學分抵免規定-1100915</th>
-                                <td>
-                                    <a href="#"><img src="../學生專區/doc.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/pdf.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/odt.png" alt=""></a>
-                                </td>
-
+                                <th scope="row" class="text-center">葉吉仁</th>
+                                <td class="text-center">財團法人台中世界貿易中心</td>
+                                <td scope="row" class="text-center">歐書華</td>
+                                <td scope="row" class="text-center"><a href="#"><img src="../學生專區/pdf.png" alt=""></a></td>
+                                
                             </tr>
                             <tr>
-                                <th scope="row" width="70%">應用外語系研究所可修習外所課程-1110623</th>
-                                <td>
-                                    <a href="#"><img src="../學生專區/doc.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/pdf.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/odt.png" alt=""></a>
-                                </td>
-
+                                <th scope="row" class="text-center">葉吉仁</th>
+                                <td class="text-center">財團法人台中世界貿易中心</td>
+                                <td scope="row" class="text-center">歐書華</td>
+                                <td scope="row" class="text-center"><a href="#"><img src="../學生專區/pdf.png" alt=""></a></td>
                             </tr>
                             <tr>
-                                <th scope="row" width="70%">國立雲林科技大學應用外語系專任教師獎勵要點-1110623</th>
-                                <td>
-                                    <a href="#"><img src="../學生專區/doc.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/pdf.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/odt.png" alt=""></a>
-                                </td>
-
+                                <th scope="row" class="text-center">葉吉仁</th>
+                                <td class="text-center">財團法人台中世界貿易中心</td>
+                                <td scope="row" class="text-center">歐書華</td>
+                                <td scope="row" class="text-center"><a href="#"><img src="../學生專區/pdf.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-center">葉吉仁</th>
+                                <td class="text-center">財團法人台中世界貿易中心</td>
+                                <td scope="row" class="text-center">歐書華</td>
+                                <td scope="row" class="text-center"><a href="#"><img src="../學生專區/pdf.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-center">葉吉仁</th>
+                                <td class="text-center">財團法人台中世界貿易中心</td>
+                                <td scope="row" class="text-center">歐書華</td>
+                                <td scope="row" class="text-center"><a href="#"><img src="../學生專區/pdf.png" alt=""></a></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-center">葉吉仁</th>
+                                <td class="text-center">財團法人台中世界貿易中心</td>
+                                <td scope="row" class="text-center">歐書華</td>
+                                <td scope="row" class="text-center"><a href="#"><img src="../學生專區/pdf.png" alt=""></a></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
-                
+
             </div>
         </div>
     </div>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實施辦法</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .header_background {
+            background-image: url(../應外首頁.png);
+            background-size: 100% 100%;
+        }
+
+        .header_color {
+            /* background-color: #411c2cd0; */
+            background-image: url(../背景圖.jpg);
+            background-size: 100% 100%;
+        }
+
+        .space_height_200 {
+            padding-bottom: 150px;
+        }
+
+        .header_selection li {
+            background-color: #5A3847;
+        }
+
+        .header_selection li a {
+            color: white;
+        }
+
+        .text-black {
+            color: black !important;
+        }
+
+        .navbar-position {
+
+            justify-content: flex-start;
+        }
+
+        .nav-item {
+            padding-left: 50px;
+        }
+
+        .nav-item a:hover {
+            background-color: #fff;
+        }
+
+        /* footer */
+        .footer-background {
+            background-color: black;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .fs-20 {
+            font-size: 25px;
+        }
+
+
+        .footer-icon {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        /* 側邊表單 */
+        .side-menu {
+            width: 300px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-menu form {
+            display: flex;
+            margin: 50px 10px 0px;
+            border-radius: 100px;
+            border: 1px solid black;
+        }
+
+        .side-menu form button,
+        .side-menu form input {
+            border: none;
+            padding: 5px 10px;
+            width: 230px;
+            background-color: transparent;
+        }
+
+        .side-menu form button:focus,
+        .side-menu form input:focus {
+            outline: none;
+        }
+
+        .side-menu form input {
+            width: 150px;
+        }
+
+        .side-menu form button {
+            width: 50px;
+        }
+
+        .side-menu>nav>a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .side-menu>nav>a+a::before {
+            content: '';
+            position: absolute;
+            border-top: 1px solid #e0dede;
+            left: 10px;
+            right: 10px;
+            top: 0;
+        }
+
+        .side-menu>nav>a .fa-solid {
+            margin-right: -1.1em;
+            transform: scale(0);
+            transition: .3s;
+        }
+
+        .side-menu>nav>a:hover .fa-solid {
+            margin-right: 0em;
+            transform: scale(1);
+        }
+
+        .menu-text,
+        .fa-solid {
+            color: black;
+        }
+
+        .side-menu>nav>a:hover .menu-text,
+        .fa-solid {
+            color: #53b8f3;
+        }
+
+        /* 側邊表單 */
+
+        .fs-15 {
+            font-size: 15px;
+        }
+
+        .fs-18 {
+            font-size: 18px;
+        }
+
+        .color-red {
+            color: red;
+        }
+
+        .color-gray {
+            color: #999
+        }
+
+        .shared-title {
+            border-bottom: 1px rgb(150, 147, 147) solid;
+        }
+
+        .height-25 {
+            height: 25px;
+        }
+
+        .shared-disc {
+            position: relative;
+            padding-left: 10px;
+        }
+
+        .shared-disc:before {
+            background-color: black;
+            position: absolute;
+            content: '';
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            bottom: 8px;
+            left: 0px;
+        }
+        .shared-title {
+            border-bottom: 1px rgb(150, 147, 147) solid;
+        }
+        .shared {
+            color: #00aaff;
+            margin: 20px 0px;
+        }
+
+        .shared_table {
+            width: 713px;
+
+            max-width: 100%;
+
+            border: 1px solid #e0dede;
+        }
+
+        /* 實施辦法 */
+        
+
+        /* 實施辦法 */
+        /* ============ only desktop view ============ */
+        @media all and (min-width: 992px) {
+            .navbar .dropdown-menu-end {
+                right: 0;
+                left: auto;
+            }
+
+            .navbar .nav-item .dropdown-menu {
+                display: block;
+                opacity: 0;
+                visibility: hidden;
+                transition: .3s;
+                margin-top: 0;
+            }
+
+            .navbar .nav-item:hover .nav-link {
+                color: #fff;
+            }
+
+            .navbar .dropdown-menu.fade-down {
+                top: 80%;
+                transform: rotateX(-75deg);
+                transform-origin: 0% 0%;
+            }
+
+            .navbar .dropdown-menu.fade-up {
+                top: 180%;
+            }
+
+            .navbar .nav-item:hover .dropdown-menu {
+                transition: .3s;
+                opacity: 1;
+                visibility: visible;
+                top: 100%;
+                transform: rotateX(0deg);
+            }
+
+            .header_background {
+                justify-content: center;
+            }
+
+            .navbar-position {
+                justify-content: center;
+            }
+
+            /* 刪除箭頭 */
+            .dropdown-toggle::after {
+                display: none;
+            }
+
+
+        }
+
+        @media screen and (max-width:992px) {
+
+            .footer-icon {
+                justify-content: flex-start;
+                padding-left: 30px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 每個頁面的最上方 -->
+    <header class="container p-0">
+        <div class="row justify-content-between m-0">
+            <div class="col-12 header_background  p-0">
+                <ul class="header_selection space_height_200 w-100 justify-content-end d-flex  flex-wrap">
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>雲科大首頁</b></span></a></li>
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>中文</b> </span></a></li>
+                    <li class="d-inline-block "> <a href="#"><span class="p-2"><b>英文</b></span></a></li>
+                </ul>
+
+            </div>
+            <div class="col-12  w-100 header_color p-0">
+                <!-- ============= COMPONENT ============== -->
+                <nav class="navbar navbar-expand-lg navbar-dark p-0">
+                    <div class="container-fluid ">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#main_nav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse navbar-position" id="main_nav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item active p-0"> <a class="nav-link text-black" href="#">Home </a> </li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> About </a></li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Services </a></li>
+                                <li class="nav-item dropdown p-0">
+                                    <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">
+                                        Hover me
+                                    </a>
+                                    <ul class="dropdown-menu fade-up">
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+                                        <li class="p-0"><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav ms-auto">
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Menu item </a></li>
+                                <li class="nav-item p-0"><a class="nav-link text-black" href="#"> Menu item </a></li>
+                                <li class="nav-item dropdown p-0">
+                                    <a class="nav-link dropdown-toggle text-black" href="#" data-bs-toggle="dropdown">
+                                        Dropdown
+                                        right </a>
+                                    <ul class="dropdown-menu dropdown-menu-end fade-down">
+                                        <li><a class="dropdown-item p-0" href="#"> Submenu item 1</a></li>
+                                        <li><a class="dropdown-item p-0" href="#"> Submenu item 2 </a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div> <!-- navbar-collapse.// -->
+                    </div> <!-- container-fluid.// -->
+                </nav>
+                <!-- ============= COMPONENT END// ============== -->
+            </div>
+        </div>
+    </header>
+    <!-- 每個頁面的最上方 -->
+
+
+    <div class="container ">
+        <div class="row justify-content-between">
+            <!-- 側邊選單 -->
+            <div class="col-12 col-lg-2 side-menu mt-5">
+                <h1 class="fs-20 mb-3">實務專題</h1>
+                <nav>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">實施辦法</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">相關表單</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">歷屆實習單位</span>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">實務專題成果</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- 右邊內容 -->
+            <div class="col-12 col-lg-9 ">
+                <div class="col-12 d-flex justify-content-between ">
+                    <span>
+                        <h1 class="fs-18 color-red mt-5 height-25 shared-title"><b class="shared-disc">
+                                碩士論文</b></h1>
+                    </span>
+                    <ul class="d-flex ">
+                        <li><a href="#" class="color-gray"> 首頁</a></li><span>></span>
+                        <li><a href="#" class="color-gray"> 學生專區</a></li><span>></span>
+                        <li>實施辦法</li>
+
+                    </ul>
+                </div>
+                <div class="col-12 mt-2">
+                    <form>
+                        <select onchange="location.href='studentwork.php?type=practice&amp;id='+this.value">
+                            <option value="0">請選擇</option>
+                            <option value="109">109</option>
+                            <option value="108">108</option>
+                            <option value="107">107</option>
+                            <option value="106">106</option>
+                            <option value="105">105</option>
+                            <option value="104">104</option>
+                            <option value="103">103</option>
+                            <option value="102">102</option>
+                            <option value="101">101</option>
+                        </select>&nbsp;學年度
+                    </form>
+                </div>
+                <div class="col-12 mt-3">
+                    <h3 class="fs-18 ">一、宗旨</h3>
+                    <p>將學校所修習之知識與技能落實於英語創意教學及文創商務溝通等相關領域，訓練學生
+                        獨立思考、研究及應用專業知識，培養問題處理及研究報告之撰寫能力。亦使學生體驗就業應有的態度及責任感，同時加強本系與產業之關係，增進學生畢業後順利就業之機會。</p>
+                    <h3 class="fs-18 ">二、課程說明及實施對象</h3>
+                    <p>將學校所修習之知識與技能落實於英語創意教學及文創商務溝通等相關領域，訓練學生
+                        獨立思考、研究及應用專業知識，培養問題處理及研究報告之撰寫能力。亦使學生體驗就業應有的態度及責任感，同時加強本系與產業之關係，增進學生畢業後順利就業之機會。</p>
+                    <h3 class="fs-18 ">三、實施方式</h3>
+                    <ul>
+                        <li>(一)、本課程得以下列兩種方式擇一完成：
+                            <ul>
+                                <li class="mt-2">1. 專題組：以分組方式進行，每組至多 6人，並推選 1 人為組長。各組自行選定題目進行研究，撰寫英文專題總報告。每位老師指導組別上限為
+                                    1組。</li>
+                                <li class="mt-2">2. 實習組：選擇至實習機構實習者，以個人為單位。實習生自行選定實習機構實習至少320 小時，撰寫英文實習總報告。每位老師指導學生上限為 6
+                                    人。</li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            (二)、英文實務專題實施流程圖及甘特圖如附件一。
+                        </li>
+                    </ul>
+                    <h3 class="fs-18 ">四、實施細則</h3>
+                    <ul>
+                        <li>(一)、專題組：
+                            <ul>
+                                <li class="mt-2">1. 專題題目：可由指導老師協助提供，或由專題生自行選定後經指導老師核可。</li>
+                                <li class="mt-2">2. 提報指導老師：
+                                    <ul>
+                                        <li>(1)
+                                            三年級上學期之期末考前一個月，學生應自行向本系任一專任教師登記為其指導學生，額滿後由指導老師繳交「附件二之一：英文實務專題指導學生名單」至系辦(DH104)登記。
+                                        </li>
+                                        <li>(2) 每名教師可收指導學生至多6人，專題組及實習組學生合併計算(二技專班學生額外計算。)</li>
+                                    </ul>
+                                </li>
+                                <li class="mt-2">
+                                    3. 更換題目或指導老師：若欲更換，需於三年級下學期開學二週內填寫「附件三：更換題目/指導老師申請表」， 經指導老師簽名同意後繳交至系辦公室登記。
+                                </li>
+                                <li class="mt-2">4. 英文實務專題(一)評分方式：
+                                    <ul>
+                                        <li>(1) 專題生三年級下學期期末考前一個月，由系辦公室統一製作「附件四：英文實務專題(一) 評分表」給指導老師評定成績。
+                                        </li>
+                                        <li>(2) 三年級下學期期末考前一個月，請繳交專題第一章給指導老師評定成績。</li>
+                                    </ul>
+                                </li>
+                                <li class="mt-2">
+                                    5. 英文實務專題(二)評分方式：專題生繳交專題總報告給指導老師，經批閱修改後，專題總報告 PDF 檔案(檔名為學號
+
+                                    +姓名+專題總報告)請寄至系辦信箱
+                                    uhe@yuntech.edu.tw。四年級上學期之期末考前一個月，系辦公室統一製作「附件七：英文實務專題(二)評分表」給指導老師評定成績。
+                                </li>
+                                <li class="mt-2">
+                                    6. 繳交授權同意書：
+
+                                    學生繳交實務專題報告電子檔時，需一併繳交紙本「附件六：機構典藏實務專題報告授權同意書」至系辦公室，俾利本校圖書館收藏。
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">
+                            (二)、實習組
+                            <ul>
+                                <li class="mt-2">1.
+                                    實習機構：係指與應用外語相關之教育、商業、文創等相關機構。實習機構由學生自行尋找，或可由指導老師推薦。實習內容需與英文專業領域相關，經指導老師認可後才可開始實習。實習期間自三年級下學期始至四年級上學期止，至少需達到
+                                    320 小時實習時數。至多可選定兩個實習機構進行實習，每一實習機構至少實習 160 小時。</li>
+                                <li class="mt-2">2. 提報指導老師： 
+                                    <ul>
+                                        <li>(1) 英文實務專題實施前一學期(三上)之期末考前一個月，學生應自行向本系任一專任教師登記為其指導學生，額滿後由指導老師繳交「附件二之一：英文實務專題指導學生名單」至系辦(DH104)登記。</li>
+                                        <li>(2) 每名教師可收指導學生至多6人，專題組及實習組學生合併計算(二技專班學生額外計算。)</li>
+                                    </ul>
+                                </li>
+                                <li class="mt-2">
+                                    3. 更換題目或指導老師：
+                                    
+                                    若欲更換，最慢需於三年級下學期開學二週內填寫「附件三：更換題目/指導老師申請表」，經指導老師簽名同意後繳交至系辦公室存查。</li>
+                                <li class="mt-2">4. 英文實務專題(一)評分方式：
+                                    <ul>
+                                        <li>(1) 學生實習機構確認後，儘速至系網下載「附件二之二：實習機構提報表」，將實習機構資訊填寫完整，並請指導老師協助填寫該附件次頁的實習機構評估表，連同「附件九： 學生校外實習家長同意書」紙本繳交至系辦公室。</li>
+                                        <li>(2) 三年級下學期期末考前一個月，請繳交「附件八：實習動機」給指導老師評定成績。</li>
+                                    </ul>
+                                </li>
+                                <li class="mt-2">5. 簽署實習合約：
+                                    <ul>
+                                        <li>(1) 實習機構確認後，請填寫「附件十七：學生校外實習合約書」。合約書內的實習機構全名務必確認正確無誤後，寄送word檔(檔名為學號+姓名+學生校外實習合約書) 至系辦信箱。實習合約一式三份，由系辦列印並送呈校長用印。待實習機構亦用印完成後，由本系、實習機構、實習生各執一份，修訂時亦同。</li>
+                                        <li>(2) 實習合約簽署完成後，學生始可進行實習。</li>
+                                    </ul>
+                                </li>
+                                <li class="mt-2">6. 英文實務專題(二)評分方式：實習機構佔 50%、指導老師佔 50%。
+                                    <ul>
+                                        <li>(1) 實習機構 50%
+
+                                            每週實習後應填寫「附件十一：實習週誌 」，並於實習結束前一週將實習週誌及「附件十六：實習成果考核表」交由督導評分。實習時數應詳實記錄於「附件十：實習出勤記錄表」，並由實習機構督導簽章認證。實習結束後，請實習機構任選下述方法回傳實習成果考核表及出勤記錄表至系辦：
+                                            <br>
+                                            郵寄：64002 雲林縣斗六市大學路 3 段 123號國立雲林科技大學應用外語系 收
+                                            <br>
+                                            傳真：05-531-2036
+                                            <br>
+                                            電子郵件：uhe@yuntech.edu.tw</li>
+                                        <li>(2) 指導老師 50%
+                                            <br>
+                                            實習生繳交實習總報告給指導老師，經批閱修改後，實習總報告 PDF 檔案(檔名為學號+姓名+實習總報告)請寄送至系辦信箱 uhe@yuntech.edu.tw。四年級上學期期末考前一個月，系辦公室統一製作「附件七：英文實務專題(二)評分表」給指導老師評定成績。</li>
+                                    </ul>
+                                </li>
+                                <li class="mt-2">7. 繳交授權同意書：
+
+                                    學生繳交實習總報告報告電子檔時，需一併繳交紙本「附件十五：機構典藏實務專題報告授權同意書」至系辦公室，俾利本校圖書館收藏。</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3 class="fs-18 ">五、管理規定與相關輔導職責</h3>
+                    <ul>
+                        <li>(一)指導老師職責
+                            <ul>
+                                <li class="mt-2">1、專題組指導老師：
+                                    <ul>
+                                        <li>(1) 指導老師負責協助指導專題生選定題目、專題進行及審核等相關事務之執行。</li>
+                                        <li>(2) 每位老師指導組別以一組(至多6人)為原則。</li>
+                                        <li>(3) 指導老師應安排所指導之專題生面談及指導時間。</li>
+                                    </ul>
+                                </li>
+                                <li class="mt-2">2、實習組指導老師：
+                                    <ul>
+                                        <li>(1) 指導老師需於學生實習前填妥實習機構評估表。</li>
+                                        <li>(2) 指導老師負責指導實習生之實習工作內容及審核總報告等相關事務。</li>
+                                        <li>(3) 每位老師指導實習生以6人為上限。</li>
+                                        <li>(4) 指導老師應定期對學生實習內容進行查訪並給予指導，並撰寫實習輔導訪視表</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">（二）學生職責：
+                            <ul>
+                                <li class="mt-2">1. 專題組
+                                    <ul>
+                                        <li>(1) 參與專題組之學生，須完成「英文實務專題」課程選課及其他相關程序。</li>
+                                        <li>(2) 專題生須主動與指導老師進行面談，就專題之題目進行研究，對於不解之部份積極與指導老師討論。</li>
+                                    </ul>
+                                </li>
+                                <li class="mt-2">2. 實習組
+                                    <ul>
+                                        <li>(1) 參與實習組之學生，須完成「英文實務專題」課程選課及其他相關程序，並填妥家長同意書，經學校與實習單位獲准後，即依照指定實習開始日期，赴實習機構報到，若未依規定前往報到，實習成績以零分計算。</li>
+                                        <li>(2) 實習期間應遵守實習機構之規定，並聽從其指導，衣著應整齊清潔，儀容端莊，態度誠懇有禮，做事勤奮、認真負責。</li>
+                                        <li>(3) 實習生對於實習機構業務上之種種機密，有責任予以保密。</li>
+                                        <li>(4) 在有危險性之實習場所須注意自身安全，有關設備、儀器、文件資料等，未經主管人員之許可，不可任意使用或搬動，違者依校規處理。</li>
+                                        <li>(5) 實習期間遇有任何未上班之假日(例如：國定假日、暑假、颱風、事病假等)，均應扣除未上班之日數，洽商實習機構延長實習日數，直到補足實習實數數為止。</li>
+                                        <li>(6) 實習期間如因故無法前往實習時，應立即向實習機構請假，負責保管之物品，應即刻奉還，以免延誤實習機構之工作。</li>
+                                        <li>(7)實習生在實習期間，未經請假許可而擅離實習崗位或不遵守實習機構規定，致實習機構行文或以電話知會學校時，學校得視其情節輕重列入考核記錄。</li>
+                                        <li>(8)實習期間報到請假辦法：如因故不克前往實習時，應立即以電話向實習單位請假，並向實習機構督導人員報備。</li>
+                                        <li>(9)請假方式:
+                                            <ul>
+                                                <li>甲、病假：一律持醫師診斷書或收據向實習機構主管請假，並向實習機構督導人員報備。</li>
+                                                <li>乙、事假：一律事先檢附相關證明向單位主管辦理請假事宜，偶發事件得以電話向實機構主管請假後，准予補辦請假手續，否則以曠班論。</li>
+                                                <li>丙、喪假：須附證明書向實習機構主管請假。</li>
+                                            </ul>
+                                        </li>
+                                        <li>(10)實習期間得在實習機構督導悉知並准允的情況下，固定返校修課。</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <h3 class="fs-18">六、英文實務專題總報告撰寫注意要點：</h3>
+                    <ul>
+                        <li>(一)、專題組
+                            <ul>
+                                <li class="mt-2">1、須以英文書寫。採用 A4 尺寸，隔行打字，字型為 Times New Roman，字體本文為12 號字，標題為 14 號字。
+                                </li>
+                                <li class="mt-2"> 2、書面報告次序
+                                    <li>(1)封面。
+                                    </li>
+                                    <li>(2)摘要：摘要應簡明扼要（以不超過 500 字為原則），包括：
+                                        <ul>
+                                            <li class="pl-3">(一)論述重點。</li>
+                                            <li class="pl-3">(二)方法或程序。</li>
+                                            <li class="pl-3">(三)結果及結論。</li>
+                                        </ul>
+                                    </li>
+                                    <li>(3)序言或致謝詞：另頁書寫。</li>
+                                    <li>(4)目次：包括摘要，各章節之標題、附錄、文獻及其所在頁數，並依次編排，圖表目錄應另頁編排。</li>
+                                    <li>(5)專題正文。</li>
+                                    <li>(6)參考文獻：參考文獻包括作者姓氏、名字、文獻名稱、卷數、頁數、出版年份、出版者，可採用 APA 或 MLA 格式。
+                                    </li>
+                                    <li>(7)附錄。</li>
+                                    <li>(8)授權同意書（附件六）紙本請繳交至系辦，勿附加於總報告檔案內。</li>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mt-2">(二)、實習組
+                            <ul>
+                                <li class="mt-2">1、須以英文書寫。採用 A4 尺寸，隔行打字，字型為 Times New Roman，字體本文為12 號字，標題為 14 號字。
+                                </li>
+                                <li class="mt-2">2、書面報告次序
+                                    <ul>
+                                        <li>(1)封面及誌謝</li>
+                                        <li>(2)目次</li>
+                                        <li>(3)實習單位描述
+                                            <ul>
+                                                <li>（一）實習機構簡介</li>
+                                                <li>（二）實習機構產品、服務項目</li>
+                                                <li>（三）實習機構組織圖(含人力編制)</li>
+                                                <li>（四）實習動機</li>
+                                            </ul>
+                                        </li>
+                                        <li> (4)實習內容
+                                            <ul>
+                                                <li>（一）實習機構職前訓練</li>
+                                                <li>（二）實習工作內容</li>
+                                                <li>（三）實習週誌 (至少八篇)</li>
+                                            </ul>
+                                        </li>
+                                        <li>(5)自我評量及實習總心得（本部分至少書寫 3,000 字）
+                                            <ul>
+                                                <li>（一）自我表現之評量及期許</li>
+                                                <li>（二）實習過程之收穫及困難</li>
+                                                <li>（三）實習後對個人生涯規劃調整與展望</li>
+                                                <li>（四）對系、實習機構及未來學弟妹實習之建議</li>
+                                                <li>（五）實習總心得</li>
+                                            </ul>
+                                        </li>
+                                        <li> (6)照片：提供至少十張實習過程之照片，並附加說明。</li>
+                                        <li> (7)授權同意書（附件十五）紙本請繳交至系辦，勿附加於總報告檔案內。</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 側邊選單+教育目標 -->
+
+    <!-- footer -->
+    <footer class="container p-0 footer-background mt-3">
+        <div class="row justify-content-center m-0">
+            <div class="col-lg-6 col-12">
+                <div class="col-12">
+                    <span class="text-white fs-20 mr-2"><b>國立雲林科技大學</b> </span>
+                    <span class="text-white fs-20"><b>應用外語系</b> </span>
+                </div>
+                <div class="col-12">
+                    <span class="text-white mr-2">64002 雲林縣斗六市大學路3段123號 </span>
+                    <span class="text-white ">Tel:05-5342601#5302~5304</span>
+                </div>
+                <div class="col-12">
+                    <span class="text-white mr-2">Copyright 2018 @ IM in NYUST ALL Right Reserved</span>
+                </div>
+            </div>
+            <div class="col-lg-4 col-12  footer-icon">
+                <span class="text-white ">
+                    <a href="#"><i class="fa-brands fa-facebook fs-20 text-white mr-2"></i></a>
+                    <a href="#"><i class="fa-regular fa-envelope fs-20 text-white mr-2"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube fs-20 text-white"></i></a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a02478fc6d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

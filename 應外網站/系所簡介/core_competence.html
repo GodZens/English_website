@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>系所專區</title>
+    <title>核心能力</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <style>
@@ -149,11 +149,7 @@
         }
 
         /* 側邊表單 */
-        /* 下載專區 */
-        .fs-15 {
-            font-size: 15px;
-        }
-
+        /* 核心能力 */
         .fs-18 {
             font-size: 18px;
         }
@@ -166,20 +162,22 @@
             color: #999
         }
 
-        .download-title {
-            border-bottom: 1px rgb(150, 147, 147) solid;
-        }
+      
 
         .height-25 {
             height: 25px;
         }
+        .shared-title {
+            border-bottom: 1px rgb(150, 147, 147) solid;
+        }
 
-        .download-disc {
+        .shared-disc{
             position: relative;
             padding-left: 10px;
         }
 
-        .download-disc:before {
+        .shared-disc:before
+        {
             background-color: black;
             position: absolute;
             content: '';
@@ -190,20 +188,8 @@
             left: 0px;
         }
 
-        .download_subtitle {
-            color: #00aaff;
-            margin: 20px 0px;
-        }
 
-        .download_table {
-            width: 713px;
-
-            max-width: 100%;
-
-            border: 1px solid #e0dede;
-        }
-
-        /* 下載專區 */
+        /* 核心能力 */
         /* ============ only desktop view ============ */
         @media all and (min-width: 992px) {
             .navbar .dropdown-menu-end {
@@ -331,7 +317,7 @@
         <div class="row justify-content-between">
             <!-- 側邊選單 -->
             <div class="col-12 col-lg-2 side-menu mt-5">
-                <h1 class="fs-20 mb-3">系所專區</h1>
+                <h1 class="fs-20 mb-3">系所簡介</h1>
                 <nav>
                     <a href="#">
                         <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">教育目標</span>
@@ -346,69 +332,35 @@
                         <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">系所辦法</span>
                     </a>
                     <a href="#">
+                        <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">教學創新做法</span>
+                    </a>
+                    <a href="#">
                         <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">核心能力</span>
                     </a>
                     <a href="#">
                         <i class="fa-solid fa-arrow-right-long"></i><span class="menu-text">空間設備</span>
                     </a>
-
                 </nav>
             </div>
             <!-- 右邊內容 -->
-            <div class="col-12 col-lg-9 p-0">
+            <div class="col-12 col-lg-9 ">
                 <div class="col-12 d-flex justify-content-between ">
                     <span>
-                        <h1 class="fs-18 color-red mt-5 download-title height-25 "><b class="download-disc">
-                                系所辦法</b></h1>
+                        <h1 class="fs-18 color-red mt-5  height-25 shared-title"><b class="shared-disc">
+                            核心能力</b></h1>
                     </span>
                     <ul class="d-flex ">
-                        <li><a href="#" class="color-gray"> 首頁</a></li><span>></span>
-                        <li><a href="#" class="color-gray"> 系所簡介</a></li><span>></span>
-                        <li>系所辦法</li>
+                        <li><a href="#" class="color-gray">首頁</a></li><span>></span>
+                        <li><a href="#" class="color-gray">系所簡介</a></li><span>></span>
+                        <li>核心能力</li>
                     </ul>
                 </div>
                 <div class="col-12 mt-3">
-                    <h3 class="download_subtitle fs-18"><i class="fa-solid fa-circle-arrow-right mr-2"></i>檔案</h3>
-                    <table class="table table-striped download_table table-bordered">
-                        <thead>
-                            <tr>
-                                <th scope="col" width="70%">檔案名稱</th>
-                                <th scope="col" width="30%">檔案連結</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row" width="70%">國立雲林科技大學應用外語系推廣教育碩士學分抵免規定-1100915</th>
-                                <td>
-                                    <a href="#"><img src="../學生專區/doc.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/pdf.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/odt.png" alt=""></a>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row" width="70%">應用外語系研究所可修習外所課程-1110623</th>
-                                <td>
-                                    <a href="#"><img src="../學生專區/doc.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/pdf.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/odt.png" alt=""></a>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <th scope="row" width="70%">國立雲林科技大學應用外語系專任教師獎勵要點-1110623</th>
-                                <td>
-                                    <a href="#"><img src="../學生專區/doc.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/pdf.png" alt=""></a>
-                                    <a href="#"><img src="../學生專區/odt.png" alt=""></a>
-                                </td>
-
-                            </tr>
-                        </tbody>
-                    </table>
+                    <img class="w-100" src="./核心能力1.jpg" alt="教育目標">
                 </div>
-
-                
+                <div class="col-12 mt-3">
+                    <img class="w-100" src="./核心能力2.jpg" alt="教育目標">
+                </div>
             </div>
         </div>
     </div>
