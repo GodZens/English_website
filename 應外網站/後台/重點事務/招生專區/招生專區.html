@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>招生專區</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 0;
+            /* margin: 0; */
+            list-style: none;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            /* 水平置中 */
+            justify-content: center;
+            /* 垂直置中 */
+            align-items: center;
+            /* margin-top: 50px; */
+            display: flex;
+            align-items: center;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for all buttons */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+        .btn-red{
+            color: red;
+        }
+        button:hover {
+            opacity: 1;
+        }
+
+        /* Extra styles for the cancel button */
+        .cancelbtn {
+            padding: 14px 20px;
+            background-color: #f44336;
+        }
+
+        /* Float cancel and signup buttons and add an equal width */
+        .cancelbtn,
+        .signupbtn {
+            float: left;
+            width: 50%;
+        }
+
+        /* Add padding to container elements */
+        .form_container {
+            padding: 16px !important;
+        }
+
+        /* Clear floats */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        td,
+        th {
+            line-height: 36px;
+        }
+
+        .fs-small {
+            font-size: 12px;
+        }
+        .btn-size{
+            width: 150px;
+        }
+
+        /* Change styles for cancel button and signup button on extra small screens */
+        @media screen and (max-width: 300px) {
+
+            .cancelbtn,
+            .signupbtn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="/action_page.php" style="border:1px solid #ccc" class="form_container container mt-5">
+        <div class="row">
+            <div class="col-12 ">
+                <h1>招生專區</h1>
+                <!-- <p>Please fill in this form to create an account.</p> -->
+                <hr>
+                <div class="col-12 d-flex justify-content-center">
+                    <button type="button" class="btn-size btn btn-outline-primary">新增招生公告(大學部)</button>
+                    <button type="button" class="btn-size btn btn-outline-secondary ml-3">新增考古題</button>
+                </div>
+                <hr>
+               
+                <span class="d-block text-center mb-2"><b>大學部</b></span>
+                <div class="col-12 m-auto  mb-5">
+                    <table class="table table-hover text-center border">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th scope="col">語言</th>
+                                <th scope="col">年度	</th>
+                                <th scope="col">修改</th>
+                                <th scope="col">刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody class=" m-auto">
+                            <tr>
+                                <td>中</td>
+                                <td>111學年度四技二專「甄選入學」招生選才內涵- 外語群英語類</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>中</td>
+                                <td>111學年度四技二專「甄選入學」招生選才內涵- 外語群英語類</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+               
+                <span class="d-block text-center mb-2"><b>碩士班、碩士班在職專班</b></span>
+                <div class="col-12 m-auto  mb-5">
+                    <table class="table table-hover text-center border">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th scope="col">放置位置</th>
+                                <th scope="col">修改</th>
+                            </tr>
+                        </thead>
+                        <tbody class=" m-auto">
+                            <tr>
+                                <td>碩士班</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改</a></td>
+                            </tr>
+                            <tr>
+                                <td>碩士班在職專班</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <span class="d-block text-center mb-2"><b>推廣學分班</b></span>
+                <div class="col-12 m-auto  mb-5">
+                    <table class="table table-hover text-center border">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th scope="col">放置位置</th>
+                                <th scope="col">修改</th>
+                            </tr>
+                        </thead>
+                        <tbody class=" m-auto">
+                            <tr>
+                                <td>推廣學分班</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <span class="d-block text-center mb-2"><b>招生簡章、歷屆考古題(大學部、研究所)</b></span>
+                <div class="col-12 m-auto  mb-5">
+                    <table class="table table-hover text-center border">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th scope="col">放置位置</th>
+                                <th scope="col">連結位置</th>
+                                <th scope="col">放置位置</th>
+                                <th scope="col">刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody class=" m-auto">
+                            <tr>
+                                <td>預研生-簡章</td>
+                                <td>目前無資料</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>預研生-簡章</td>
+                                <td>目前無資料</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>預研生-簡章</td>
+                                <td>目前無資料</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+                <span class="d-block text-center mb-2"><b>考古題 - 研究所</b></span>
+                <div class="col-12 m-auto  mb-5">
+                    <table class="table table-hover text-center border">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th scope="col">年度</th>
+                                <th scope="col">連結位置</th>
+                                <th scope="col">修改</th>
+                            </tr>
+                        </thead>
+                        <tbody class=" m-auto">
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <span class="d-block text-center mb-2"><b>考古題 - 在職專班</b></span>
+                <div class="col-12 m-auto  mb-5">
+                    <table class="table table-hover text-center border">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th scope="col">年度</th>
+                                <th scope="col">連結位置</th>
+                                <th scope="col">修改</th>
+                            </tr>
+                        </thead>
+                        <tbody class=" m-auto">
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <span class="d-block text-center mb-2"><b>考古題 - 轉學考英文考題</b></span>
+                <div class="col-12 m-auto  mb-5">
+                    <table class="table table-hover text-center border">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th scope="col">年度</th>
+                                <th scope="col">連結位置</th>
+                                <th scope="col">修改</th>
+                            </tr>
+                        </thead>
+                        <tbody class=" m-auto">
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>99</td>
+                                <td>https://www.lib.yuntech.edu.tw/wSite/public/Attachment/f1607579614091.pdf</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                
+                <span class="d-block text-center mb-2"><b>標竿校友</b></span>
+                <div class="col-12 d-flex justify-content-center">
+                    <button type="button" class="btn-size btn btn-outline-primary">新增學生</button>
+                </div>
+                <div class="col-12 m-auto  mb-5">
+                    <table class="table table-hover text-center border">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th scope="col">校友名稱</th>
+                                <th scope="col">任職單位</th>
+                                <th scope="col">優秀表現</th>
+                                <th scope="col">相關報導/資訊</th>
+                                <th scope="col">更換照片	</th>
+                                <th scope="col">修改內容</th>
+                                <th scope="col">刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody class=" m-auto">
+                            <tr>
+                                <td>劉O樵</td>
+                                <td>現任信通交通器材股份有限公司 經理</td>
+                                <td>雲科大畢業年月：民國96年6月
+                                    碩士指導教授-焦錦濮副教授
+                                    榮譽： 榮獲106學年度人文與科學學院暨應用外語系(所)傑出校友
+                                    曾任： 正新輪胎印度分公司 擔任Commercial Head 行銷長
+                                    經歷：1.擔任正新輪胎印度區經理
+                                    2.負責正新輪胎分公司建廠工程
+                                    3.負責拓展印度汽、機車輪胎之內需市場，成功搶攻前五大車廠訂單
+                                    4.精通口/筆譯 國際經貿知識、商務談判技巧</td>
+                                <td>相關報導/資訊</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改照片</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改內容</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>劉O樵</td>
+                                <td>現任信通交通器材股份有限公司 經理</td>
+                                <td>雲科大畢業年月：民國96年6月
+                                    碩士指導教授-焦錦濮副教授
+                                    榮譽： 榮獲106學年度人文與科學學院暨應用外語系(所)傑出校友
+                                    曾任： 正新輪胎印度分公司 擔任Commercial Head 行銷長
+                                    經歷：1.擔任正新輪胎印度區經理
+                                    2.負責正新輪胎分公司建廠工程
+                                    3.負責拓展印度汽、機車輪胎之內需市場，成功搶攻前五大車廠訂單
+                                    4.精通口/筆譯 國際經貿知識、商務談判技巧</td>
+                                <td>相關報導/資訊</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改照片</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改內容</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                            <tr>
+                                <td>劉O樵</td>
+                                <td>現任信通交通器材股份有限公司 經理</td>
+                                <td>雲科大畢業年月：民國96年6月
+                                    碩士指導教授-焦錦濮副教授
+                                    榮譽： 榮獲106學年度人文與科學學院暨應用外語系(所)傑出校友
+                                    曾任： 正新輪胎印度分公司 擔任Commercial Head 行銷長
+                                    經歷：1.擔任正新輪胎印度區經理
+                                    2.負責正新輪胎分公司建廠工程
+                                    3.負責拓展印度汽、機車輪胎之內需市場，成功搶攻前五大車廠訂單
+                                    4.精通口/筆譯 國際經貿知識、商務談判技巧</td>
+                                <td>相關報導/資訊</td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改照片</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">修改內容</a></td>
+                                <td><a href="actionadmin.php?admin=delcooperation&amp;type=industry&amp;id=135">刪除</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <div class="clearfix mt-5">
+                    <button type="submit" class="signupbtn">新增</button>
+                    <button type="button" class="cancelbtn">返回</button>
+                </div>
+
+            </div>
+        </div>
+
+    </form>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
+        crossorigin="anonymous"></script>
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/a02478fc6d.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
